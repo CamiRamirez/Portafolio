@@ -1,0 +1,16 @@
+{
+  "name": "portafolio-frontend",
+  "version": "0.0.1",
+  "description": "Portafolio profesional de proyectos e información sobre Camila Ramírez Ponce, Desarrolladora Front-end Developer y Diseñadora Industrial",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "portafolio",
+    "proyectos",
+    "personal"
+  ],
+  "author": "Camila Constanza Ramírez Ponce",
+  "license": "ISC"
+}
