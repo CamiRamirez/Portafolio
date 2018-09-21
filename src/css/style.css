@@ -12,21 +12,25 @@ html,body {
 .scene {
   position: relative;
   height: 100%;
-  background: #1d1f20;
+  background: radial-gradient(circle,#2f3030, #1d1f20, #1d1f20);
   padding-top: 15%;
   padding-left: 10%;
   padding-right: 10%;
   text-align: center;
 }
-h1 {
+#title {
   position: relative;
   font-size: 15em;
-  text-transform: uppercase;
   font-family: 'Amatic SC', cursive;
   color: #fff;
   z-index: 10;
   text-align: center;
 }
+
+#title:hover{
+  text-shadow: #1d1f20 0.1em 0.1em 0.2em
+}
+
 .magic {
   z-index: 5;
   position: absolute;
@@ -60,6 +64,10 @@ hr {
     color: salmon;
     font-size: 6em;
     font-family: 'Amatic SC', cursive;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 10;
+    text-align: center;
   }
 
   /*Estilo boton de entrada*/
@@ -73,12 +81,20 @@ hr {
     -webkit-transform: scale(1.5);
     -ms-transform: scale(1.5);
     transform: scale(1.5);
-    box-shadow: #1d1f20;
+    color: #1d1f20;
   }
    #conoceme{
      color: salmon;
      font-family: 'Amatic SC', cursive;
+     font-size: 1.5em;
    }
+
+   #conoceme:hover{
+    color: black;
+    font-weight: bold;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.5em;
+  }
    
    .info{
      display: none;
