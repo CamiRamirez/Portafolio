@@ -2,7 +2,7 @@
 $(document).ready(function() {
   var $magic = $(".magic"),
       magicWHalf = $magic.width() / 2;
-  $(document).on("touchmove", function(e) {
+  $(document).on("touchmove || mousemove", function(e) {
     $magic.css({"left": e.pageX - magicWHalf, "top": e.pageY - magicWHalf});
   });
 });
@@ -65,3 +65,10 @@ window.onload = function() {
   css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
   document.body.appendChild(css);
 };
+
+
+$(document).ready(function(){
+    $("#btnEnter").click(function(){
+        $("#divInicio").hide(1000);
+    });
+});
