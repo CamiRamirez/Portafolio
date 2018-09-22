@@ -7,13 +7,16 @@ html,body {
   font-size: 62.5%;
   height: 100%;
   overflow: hidden;
-  background: #1d1f20;
+  background-image: url(../../src/img/art-artist-blur-436775.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:100vh;
 }
 .scene {
   position: relative;
   height: 100%;
   background: radial-gradient(circle,#2f3030, #1d1f20, #1d1f20);
-  padding-top: 15%;
+  padding-top: 12%;
   padding-left: 10%;
   padding-right: 10%;
   text-align: center;
@@ -21,11 +24,18 @@ html,body {
 #title {
   position: relative;
   font-size: 15em;
-  font-family: 'Amatic SC', cursive;
+  font-family:'Pacifico', cursive;
   color: #fff;
   z-index: 10;
   text-align: center;
 }
+@media (max-width: 450px) {
+  #title{
+    padding-top: 1em;
+    font-size: 10em;
+  }
+}
+
 
 #title:hover{
   text-shadow: #1d1f20 0.1em 0.1em 0.2em
@@ -45,7 +55,6 @@ html,body {
 .check-out {
   z-index: 100;
   position: absolute;
-  bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
   font-size: 2rem;
@@ -57,12 +66,13 @@ html,body {
   }
 
 hr {
-  background-color: salmon;
+  background-color: #ca4370;
 }
   /*Estilo para subtitulo que cambia*/
   #titleChange{
-    color: salmon;
+    color: #ca4370;
     font-size: 6em;
+    font-weight: 800;
     font-family: 'Amatic SC', cursive;
     position: relative;
     text-transform: uppercase;
@@ -81,12 +91,15 @@ hr {
     -webkit-transform: scale(1.5);
     -ms-transform: scale(1.5);
     transform: scale(1.5);
-    color: #1d1f20;
+    color: white;
+    -webkit-text-stroke: #ca4370 3px;
   }
    #conoceme{
-     color: salmon;
+     color: #ca4370;
      font-family: 'Amatic SC', cursive;
      font-size: 1.5em;
+     font-weight:500;
+     margin-top: 10rem;
    }
 
    #conoceme:hover{
@@ -98,4 +111,151 @@ hr {
    
    .info{
      display: none;
+     
    }
+
+   /*Estilos para menu*/
+
+   #headerTop{
+    width: 100%;
+    background-color: rgba(153, 152, 153, 0.3);
+    color: #1d1f20;
+    height: 10em;
+    padding:0;
+    position: fixed;
+  }
+
+  .btnContact{
+    float: right;
+    margin-top: 0.3em;
+    border-radius: 3px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    background-color:  rgba(255, 255, 255, 0.3); 
+    margin-top: 0.8em;
+    margin-right: 1em;
+    cursor: pointer;
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+  }
+
+  .btnContact:hover{
+    background-color:  rgba(255, 255, 255, 0.2); 
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  /*estilos para mostrar proyectos*/
+  @import url(https://fonts.googleapis.com/css?family=Raleway);
+
+.containerProjects{
+  padding-top: 10%;
+  text-align: center;
+}
+.snip1584 {
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 10px 8px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: left;
+}
+.snip1584 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.snip1584:before {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  top: 100%;
+  content: '';
+  background-color: rgba(51, 51, 51, 0.9);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+.snip1584 img {
+  vertical-align: top;
+  max-width: 100%;
+  backface-visibility: hidden;
+}
+.snip1584 figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.snip1584 h3,
+.snip1584 h5 {
+  margin: 0;
+  opacity: 0;
+  letter-spacing: 1px;
+}
+.snip1584 h3 {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  text-transform: uppercase;
+  font-weight: 400;
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+  margin-bottom: 5px;
+}
+.snip1584 h5 {
+  font-weight: normal;
+  background-color: #ae895d;
+  padding: 3px 10px;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.snip1584 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.snip1584:hover:before,
+.snip1584.hover:before {
+  top: 10px;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.snip1584:hover h3,
+.snip1584.hover h3,
+.snip1584:hover h5,
+.snip1584.hover h5 {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+.snip1584:hover h3,
+.snip1584.hover h3 {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.snip1584:hover h5,
+.snip1584.hover h5 {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}

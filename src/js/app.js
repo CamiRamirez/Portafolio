@@ -66,7 +66,7 @@ window.onload = function() {
   document.body.appendChild(css);
 };
 
-
+//funcion para transicion con efecto de inicio
 $(document).ready(function(){
     $("#btnEnter").click(function(){
         $("#divInicio").hide(1000);
