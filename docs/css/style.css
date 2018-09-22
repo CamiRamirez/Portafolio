@@ -11,6 +11,7 @@ html,body {
   background-size: cover;
   background-repeat: no-repeat;
   height:100vh;
+  
 }
 .scene {
   position: relative;
@@ -131,12 +132,13 @@ hr {
     border-radius: 3px;
     border: 2px solid rgba(255, 255, 255, 0);
     background-color:  rgba(255, 255, 255, 0.3); 
-    margin-top: 0.8em;
+    margin-top: 0.4em;
     margin-right: 1em;
     cursor: pointer;
     color: white;
-    font-size: 3em;
+    font-size: 4em;
     font-weight: bold;
+    font-family: 'Amatic SC', cursive;
   }
 
   .btnContact:hover{
@@ -150,8 +152,9 @@ hr {
   @import url(https://fonts.googleapis.com/css?family=Raleway);
 
 .containerProjects{
-  padding-top: 10%;
+  padding-top: 18em;
   text-align: center;
+  overflow-y: auto;
 }
 .snip1584 {
   font-family: 'Raleway', sans-serif;
@@ -258,4 +261,93 @@ hr {
 .snip1584.hover h5 {
   -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
+}
+
+/* menu lateral*/
+.menuLeft{
+  margin-top: 1em;
+}
+.names {
+  font-family:'Amatic SC', cursive;
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  margin-left: 1.5em;
+  margin-top: 0.2em;
+}
+
+.aLeft {
+  text-decoration: none;
+}
+
+#btn1 {
+  margin-top: 100px;
+}
+
+#btn2 {
+  margin-top: 180px;
+}
+
+#btn3 {
+  margin-top: 260px;
+}
+
+#btn4 {
+  margin-top: 340px;
+}
+
+div.button {
+  background-color: rgba(153, 152, 153, 0.3);
+  color: #2c3e50;
+  border: none;
+  border-radius: 30px;
+  width: 440px;
+  height: 40px;
+  position: fixed;
+  left: -400px;
+  transition: .7s ease;
+}
+
+div.button:hover {
+  background-color: #ffffff;
+  position: fixed;
+  left: -50px;
+  width: 200px;
+  border-radius: 30px;
+  
+}
+
+div.button:active {
+  background-color: #2c3e50;
+  transition: 0s;
+  color: #ecf0f1;
+}
+
+.fa-smile-wink{
+  float: right;
+  color: white;
+  margin-right: 0.3em;
+  margin-top: 0.1em;
+}
+.fa-envelope{
+  float: right;
+  color: white;
+  margin-right: 0.7em;
+  margin-top: 0.3em;
+  font-size: 0.8em;
+}
+.fa-book{
+  float: right;
+  color: white;
+  margin-right: 0.7em;
+  margin-top: 0.3em;
+  font-size: 0.8em;
+}
+
+.fa-heart{
+  float: right;
+  color: white;
+  margin-right: 0.3em;
+  margin-top: 0.1em;
 }
