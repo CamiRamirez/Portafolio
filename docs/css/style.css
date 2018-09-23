@@ -11,13 +11,22 @@ html,body {
   background-size: cover;
   background-repeat: no-repeat;
   height:100vh;
-  
 }
+
+#logoc{
+  position: relative;
+  z-index: 100;
+  text-align: center;  
+  width: 15em;
+  padding-bottom: 0;
+
+}
+
 .scene {
   position: relative;
   height: 100%;
   background: radial-gradient(circle,#2f3030, #1d1f20, #1d1f20);
-  padding-top: 12%;
+  padding-top: 8%;
   padding-left: 10%;
   padding-right: 10%;
   text-align: center;
@@ -29,14 +38,15 @@ html,body {
   color: #fff;
   z-index: 10;
   text-align: center;
+  margin-top: 3%;
 }
+
+
 @media (max-width: 450px) {
   #title{
-    padding-top: 1em;
     font-size: 10em;
   }
 }
-
 
 #title:hover{
   text-shadow: #1d1f20 0.1em 0.1em 0.2em
@@ -49,7 +59,7 @@ html,body {
   left: calc(50% - 10rem);
   width: 20rem;
   height: 20rem;
-  background: url(../img/background1.png) 50% 50% no-repeat fixed;
+  background: url(../img/art-artist-blur-436775.jpg) 50% 50% no-repeat fixed;
   background-size: cover;
   border-radius: 50%;
 }
@@ -96,11 +106,11 @@ hr {
     -webkit-text-stroke: #ca4370 3px;
   }
    #conoceme{
-     color: #ca4370;
+     color: white;
      font-family: 'Amatic SC', cursive;
      font-size: 1.5em;
      font-weight:500;
-     margin-top: 10rem;
+     margin-top: 8rem;
    }
 
    #conoceme:hover{
@@ -126,20 +136,41 @@ hr {
     position: fixed;
   }
 
+  #logoHeader{
+    margin-left: 1em;
+    margin-top: 1em;
+    width: 8em;
+    float: left;
+  }
+
   .btnContact{
     float: right;
     margin-top: 0.3em;
-    border-radius: 3px;
+    border-radius: 10px;
     border: 2px solid rgba(255, 255, 255, 0);
     background-color:  rgba(255, 255, 255, 0.3); 
     margin-top: 0.4em;
-    margin-right: 1em;
+    margin-right: 0.5em;
     cursor: pointer;
     color: white;
     font-size: 4em;
     font-weight: bold;
     font-family: 'Amatic SC', cursive;
   }
+
+  @media (max-width: 450px) {
+    .btnContact{
+      margin-top: 0.8em;
+      font-size: 3em;
+    }
+  }
+  @media (max-width: 390px) {
+    .btnContact{
+      margin-top: 1em;
+      font-size: 2.5em;
+    }
+  }
+ 
 
   .btnContact:hover{
     background-color:  rgba(255, 255, 255, 0.2); 
@@ -148,13 +179,33 @@ hr {
     transform: scale(1.1);
   }
 
+
+  /*mensaje de bienvenida*/
+.containerWelcome{
+  margin-top: 18em;
+}
+
+#welcome{
+  font-size: 6em;
+  color: white;
+  text-align: left;
+}
+
+
   /*estilos para mostrar proyectos*/
   @import url(https://fonts.googleapis.com/css?family=Raleway);
 
 .containerProjects{
+  display: none;
   padding-top: 18em;
   text-align: center;
   overflow-y: auto;
+}
+
+@media (max-width: 450px) {
+  .containerProjects{
+    width: 80%;
+  }
 }
 .snip1584 {
   font-family: 'Raleway', sans-serif;
