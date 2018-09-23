@@ -11,6 +11,7 @@ html,body {
   background-size: cover;
   background-repeat: no-repeat;
   height:100vh;
+  
 }
 
 #logoc{
@@ -30,15 +31,18 @@ html,body {
   padding-left: 10%;
   padding-right: 10%;
   text-align: center;
+  overflow: hidden;
 }
 #title {
   position: relative;
   font-size: 15em;
-  font-family:'Pacifico', cursive;
+  font-family: 'Raleway', sans-serif;
   color: #fff;
   z-index: 10;
   text-align: center;
   margin-top: 3%;
+  letter-spacing: 5px;
+  
 }
 
 
@@ -122,7 +126,6 @@ hr {
    
    .info{
      display: none;
-     
    }
 
    /*Estilos para menu*/
@@ -182,13 +185,101 @@ hr {
 
   /*mensaje de bienvenida*/
 .containerWelcome{
-  margin-top: 18em;
+  margin-top: 25em;
 }
 
 #welcome{
-  font-size: 6em;
+  font-size: 10em;
   color: white;
-  text-align: left;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 5px;
+}
+
+@media (max-width: 600px) {
+  #welcome{
+    font-size: 7em;
+  }
+}
+@media (max-width: 450px) {
+  #welcome{
+    font-size: 4em;
+  }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+
+
+.text {
+  position: relative;
+  width: 450px;
+  left: 50%;
+  margin-left: -230px;
+  height: 40px;
+  top: 50%;
+  margin-top: -20px;
+  font-size: 4em;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+@media (max-width: 580px) {
+  .subTextChange{
+    font-size: 0.5em;
+    margin-left: 40em;
+  }
+}
+
+.pChange {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+
+.word {
+  position: absolute;
+  width: 220px;
+  opacity: 0;
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wisteria {
+  color: #d786fa;
+}
+
+.belize {
+  color: #2980b9;
+}
+
+.pomegranate {
+  color: yellow;
+}
+
+.green {
+  color: #16a085;
+}
+
+.midnight {
+  color: salmon;
 }
 
 
@@ -401,4 +492,49 @@ div.button:active {
   color: white;
   margin-right: 0.3em;
   margin-top: 0.1em;
+}
+
+/*ACERCA DE MI*/
+.containerMe{
+  text-align: center;
+  margin-top: 15em;
+  background-color: rgba(153, 152, 153, 0.4);
+  width: 75%;
+  border-radius: 5px;
+  display: none;
+}
+#fotoPerfil{
+  width: 40em;
+  position: relative;
+  margin-top: 10em;
+}
+
+#aboutMe{
+  font-size: 4em;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 5px;
+  margin-top: 3em;
+}
+
+#descriptionMe{
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1px;
+  margin-top: 3em;
+  padding-bottom: 5em;
+}
+
+/*estilos seccion SKILLS*/
+
+.containerSkills{
+  display: none;
+  text-align: center;
+  margin-top: 15%;
+}
+
+.titleSkills{
+  color: white;
+  font-size: 3em;
+  font-family: 'Raleway', sans-serif;
 }

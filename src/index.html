@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Noto+Serif|Trochut|Fira+Sans|Lobster|Marcellus|Fredericka+the+Great|Playfair+Display|Comfortaa|Pacifico|"
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Noto+Serif|Trochut|Fira+Sans|Lobster|Marcellus|Fredericka+the+Great|Playfair+Display|Comfortaa|Pacifico|Raleway:300,400|"
     rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
@@ -19,14 +19,14 @@
 <body>
   <div class="scene" id="divInicio">
     <img src="img/lococ.png" alt="logo" id="logoc">
-    <h1 id="title">Camila Ramírez</h1>
+    <h1 id="title">CAMILA RAMÍREZ</h1>
     <hr id="line">
     <h1 id="titleChange">
-      <a class="typewrite" data-period="2000" data-type='[ "Hola! Soy Front-End Developer", "También Diseñadora Industrial"]'>
+      <a class="typewrite" data-period="2000" data-type='[ "Hola! Soy Front-End Developer", "& Diseñadora Industrial"]'>
         <span class="wrap"></span>
       </a>
     </h1>
-    
+
     <div class="magic"></div>
     <div class="check-out">
       <p id="conoceme">¡Conoceme!</p>
@@ -36,58 +36,81 @@
 
   <header id="info">
     <div class="col-md-12" id="headerTop">
-      <img src="img/lococ.png" alt="logo" id="logoHeader">
+      <img src="img/lococ.png" alt="logo" id="logoHeader" onclick="openInicio()">
       <button class="btnContact">
-        <span class="textBtn">Contáctame</span>
+        <span class="textBtn" onclick="openContact()">Contáctame</span>
       </button>
       <button class="btnContact">
-        <span class="textBtn">Proyectos</span>
+        <span class="textBtn" onclick="openProjects()">Proyectos</span>
       </button>
       <button class="btnContact">
-        <span class="textBtn">Skills</span>
+        <span class="textBtn" onclick="openSkills()" >Skills</span>
       </button>
       <button class="btnContact">
-        <span class="textBtn">Acerca de mí</span> 
+        <span class="textBtn" onclick="openMe()" >Acerca de mí</span>
       </button>
     </div>
 
     <div id="menuLeft">
-        <a class="aLeft" href="">
-          <div id="btn1" class="button">
-            <h1 class="names">Acerca de mí <i class="far fa-smile-wink"></i></h1>
-          </div>
-        </a>
-        
-        <a class="aLeft" href="">
-          <div id="btn2" class="button">
-            <h1 class="names">Skills <i class="far fa-heart"></i></h1>
-          </div>
-        </a>
-        
-        <a class="aLeft" href="">
-          <div id="btn3" class="button">
-            <h1 class="names">Proyectos <i class="fas fa-book"></i></h1>
-          </div>
-        </a>
-
-        <a class="aLeft" href="">
-            <div id="btn4" class="button">
-              <h1 class="names">Contáctame <i class="far fa-envelope"></i></h1>
-            </div>
-          </a>
+      <a class="aLeft" onclick="openMe()">
+        <div id="btn1" class="button">
+          <h1 class="names">Acerca de mí
+            <i class="far fa-smile-wink"></i>
+          </h1>
         </div>
+      </a>
+
+      <a class="aLeft" onclick="openSkills()">
+        <div id="btn2" class="button">
+          <h1 class="names">Skills
+            <i class="far fa-heart"></i>
+          </h1>
+        </div>
+      </a>
+
+      <a class="aLeft" onclick="openProjects()">
+        <div id="btn3" class="button">
+          <h1 class="names">Proyectos
+            <i class="fas fa-book"></i>
+          </h1>
+        </div>
+      </a>
+
+      <a class="aLeft" onclick="openContact()">
+        <div id="btn4" class="button">
+          <h1 class="names">Contáctame
+            <i class="far fa-envelope"></i>
+          </h1>
+        </div>
+      </a>
+
+    </div>
   </header>
 
-  <div class="container containerWelcome">
+  <div class="container containerWelcome" id="containerWelcome">
     <div class="row">
       <div class="col-md-10 mx-auto">
-        <h1 id="welcome">¡Bienvenido!</h1>
+        <h1 id="welcome">¡BIENVENIDO!</h1>
+      </div>
+    </div>
+    <div class="row subTextChange">
+      <div class="col-md-6 mx-auto">
+        <div class="text">
+          <p class="pChange">Aquí podrás saber sobre mis</p>
+          <p class="pChange">
+            <span class="word wisteria">proyectos</span>
+            <span class="word belize">habilidades</span>
+            <span class="word pomegranate">conocimientos</span>
+            <span class="word green">gustos</span>
+            <span class="word midnight">redes+contacto</span>
+          </p>
+        </div>
       </div>
     </div>
   </div>
 
 
-  <div class="container containerProjects">
+  <div class="container containerProjects" id="containerProjects">
     <figure class="snip1584">
       <img src="../src/img/trello.png" alt="trello" />
       <figcaption>
@@ -114,10 +137,47 @@
     </figure>
   </div>
 
- 
-  <div class="container containerMe">
 
+  <div class="container containerMe" id="containerMe">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="img/perfilcv.png" alt="fotoPerfil" id="fotoPerfil">
+      </div>
+      <div class="col-md-6">
+        <h2 id="aboutMe">ACERCA DE MI</h2>
+        <h4 id="descriptionMe">¡Hola! Mi nombre es
+          <b>Camila Ramírez</b>, Front-End Developer y Diseñadora Industrial. Tengo 27 años y me defino como una profesional
+          con espíritu emprendedor, sentido social y capacidad de trabajar en equipo. Tomo los desafíos con enfoque pro activo,
+          perseverancia y de aprendizaje constante. Me encantan las manualidades, la música, la naturaleza y aprender cosas
+          nuevas.
+          </h6>
+      </div>
+    </div>
   </div>
+
+  <div class="container containerSkills" id="containerSkills">
+    <div class="row ">
+      <div class="col-md-6 offset-3">
+        <h1 class="titleSkills">Desarrollo Web</h1>
+      </div>
+      <div class="col-md-6 offset-3">
+        <h1 class="titleSkills">Diseño</h1>
+      </div>
+      <div class="col-md-6 offset-3">
+        <h1 class="titleSkills">Transversales</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="container containerContact" id="containerContact">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <p>contact</p>
+        </div>
+      </div>
+    </div>
+
+
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
