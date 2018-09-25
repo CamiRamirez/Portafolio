@@ -11,7 +11,6 @@ html,body {
   background-size: cover;
   background-repeat: no-repeat;
   height:100vh;
-  
 }
 
 #logoc{
@@ -196,8 +195,9 @@ hr {
   letter-spacing: 5px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 520px) {
   #welcome{
+    margin-top: 3.5em;
     font-size: 7em;
   }
 }
@@ -206,6 +206,7 @@ hr {
     font-size: 4em;
   }
 }
+
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
 
@@ -406,8 +407,10 @@ hr {
 }
 
 /* menu lateral*/
-.menuLeft{
-  margin-top: 1em;
+@media (max-width: 600px) {
+  #menuLeft{
+    display: none;
+  }
 }
 .names {
   font-family:'Amatic SC', cursive;
@@ -515,6 +518,17 @@ div.button:active {
   font-family: 'Raleway', sans-serif;
   letter-spacing: 5px;
   margin-top: 3em;
+}
+
+@media (max-width: 765px) {
+  #aboutMe{
+    margin-top:0;
+  }
+}
+@media (max-width: 375px) {
+  #fotoPerfil{
+    width: 30em;
+  }
 }
 
 #descriptionMe{
