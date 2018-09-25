@@ -1,15 +1,15 @@
 //Funcion para mostrar foto de fondo a través de circulo
-$(document).ready(function() {
+$(document).ready(function () {
   var $magic = $(".magic"),
-      magicWHalf = $magic.width() / 2;
-  $(document).on("touchmove || mousemove", function(e) {
-    $magic.css({"left": e.pageX - magicWHalf, "top": e.pageY - magicWHalf});
+    magicWHalf = $magic.width() / 2;
+  $(document).on("touchmove || mousemove", function (e) {
+    $magic.css({ "left": e.pageX - magicWHalf, "top": e.pageY - magicWHalf });
   });
 });
 
 
 //funcion para escritura de presentacion
-var TxtType = function(el, toRotate, period) {
+var TxtType = function (el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
@@ -19,17 +19,17 @@ var TxtType = function(el, toRotate, period) {
   this.isDeleting = false;
 };
 
-TxtType.prototype.tick = function() {
+TxtType.prototype.tick = function () {
   var i = this.loopNum % this.toRotate.length;
   var fullTxt = this.toRotate[i];
 
   if (this.isDeleting) {
-  this.txt = fullTxt.substring(0, this.txt.length - 1);
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
   } else {
-  this.txt = fullTxt.substring(0, this.txt.length + 1);
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
   }
 
-  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+  this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
   var that = this;
   var delta = 200 - Math.random() * 100;
@@ -37,27 +37,27 @@ TxtType.prototype.tick = function() {
   if (this.isDeleting) { delta /= 2; }
 
   if (!this.isDeleting && this.txt === fullTxt) {
-  delta = this.period;
-  this.isDeleting = true;
+    delta = this.period;
+    this.isDeleting = true;
   } else if (this.isDeleting && this.txt === '') {
-  this.isDeleting = false;
-  this.loopNum++;
-  delta = 500;
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
   }
 
-  setTimeout(function() {
-  that.tick();
+  setTimeout(function () {
+    that.tick();
   }, delta);
 };
 
-window.onload = function() {
+window.onload = function () {
   var elements = document.getElementsByClassName('typewrite');
-  for (var i=0; i<elements.length; i++) {
-      var toRotate = elements[i].getAttribute('data-type');
-      var period = elements[i].getAttribute('data-period');
-      if (toRotate) {
-        new TxtType(elements[i], JSON.parse(toRotate), period);
-      }
+  for (var i = 0; i < elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-type');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtType(elements[i], JSON.parse(toRotate), period);
+    }
   }
   // INJECT CSS
   var css = document.createElement("style");
@@ -67,10 +67,10 @@ window.onload = function() {
 };
 
 //funcion para transicion con efecto de inicio
-$(document).ready(function(){
-    $("#btnEnter").click(function(){
-        $("#divInicio").hide(1000);
-    });
+$(document).ready(function () {
+  $("#btnEnter").click(function () {
+    $("#divInicio").hide(1000);
+  });
 });
 
 //funcion para efecto en bienvenida
@@ -85,30 +85,30 @@ for (var i = 0; i < words.length; i++) {
 
 function changeWord() {
   var cw = wordArray[currentWord];
-  var nw = currentWord == words.length-1 ? wordArray[0] : wordArray[currentWord+1];
+  var nw = currentWord == words.length - 1 ? wordArray[0] : wordArray[currentWord + 1];
   for (var i = 0; i < cw.length; i++) {
     animateLetterOut(cw, i);
   }
-  
+
   for (var i = 0; i < nw.length; i++) {
     nw[i].className = 'letter behind';
     nw[0].parentElement.style.opacity = 1;
     animateLetterIn(nw, i);
   }
-  
-  currentWord = (currentWord == wordArray.length-1) ? 0 : currentWord+1;
+
+  currentWord = (currentWord == wordArray.length - 1) ? 0 : currentWord + 1;
 }
 
 function animateLetterOut(cw, i) {
-  setTimeout(function() {
-		cw[i].className = 'letter out';
-  }, i*80);
+  setTimeout(function () {
+    cw[i].className = 'letter out';
+  }, i * 80);
 }
 
 function animateLetterIn(nw, i) {
-  setTimeout(function() {
-		nw[i].className = 'letter in';
-  }, 340+(i*80));
+  setTimeout(function () {
+    nw[i].className = 'letter in';
+  }, 340 + (i * 80));
 }
 
 function splitLetters(word) {
@@ -122,59 +122,9 @@ function splitLetters(word) {
     word.appendChild(letter);
     letters.push(letter);
   }
-  
+
   wordArray.push(letters);
 }
 
 changeWord();
 setInterval(changeWord, 4000);
-
-//funcion para mostrar seccion perfil
-function openMe() { 
-    document.getElementById('containerMe').style.display = 'block';
-    document.getElementById('containerProjects').style.display = 'none';
-    document.getElementById('containerSkills').style.display = 'none';
-    document.getElementById('containerWelcome').style.display = 'none';
-    document.getElementById('containerContact').style.display = 'none';
-}
-
-function openProjects() { 
-  document.getElementById('containerMe').style.display = 'none';
-  document.getElementById('containerProjects').style.display = 'block';
-  document.getElementById('containerSkills').style.display = 'none';
-  document.getElementById('containerWelcome').style.display = 'none';
-  document.getElementById('containerContact').style.display = 'none';
-}
-
-//funcion para mostrar seccion skills
-function openSkills() { 
-  document.getElementById('containerMe').style.display = 'none';
-  document.getElementById('containerProjects').style.display = 'none';
-  document.getElementById('containerSkills').style.display = 'block';
-  document.getElementById('containerWelcome').style.display = 'none';
-  document.getElementById('containerContact').style.display = 'none';
-}
-
-//funcion para mostrar seccion Contacto
-function openContact() { 
-  document.getElementById('containerMe').style.display = 'none';
-  document.getElementById('containerProjects').style.display = 'none';
-  document.getElementById('containerSkills').style.display = 'none';
-  document.getElementById('containerWelcome').style.display = 'none';
-  document.getElementById('containerContact').style.display = 'block';
-}
-
-//funcion para mostrar seccion Welcome
-function openWelcome() { 
-  document.getElementById('containerMe').style.display = 'block';
-  document.getElementById('containerProjects').style.display = 'none';
-  document.getElementById('containerSkills').style.display = 'none';
-  document.getElementById('containerWelcome').style.display = 'none';
-  document.getElementById('containerContact').style.display = 'none';
-}
-
-//funcion para mostrar seccion Welcome
-function openInicio() { 
-  
-}
-
