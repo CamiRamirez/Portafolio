@@ -45,6 +45,6 @@ function openWelcome() {
 
 //funcion para mostrar seccion Welcome
 function openInicio() {
-
+  location.reload();
 }
 

@@ -143,6 +143,7 @@ hr {
     margin-top: 1em;
     width: 8em;
     float: left;
+    cursor: pointer;
   }
 
   .btnContact{
@@ -158,6 +159,7 @@ hr {
     font-size: 4em;
     font-weight: bold;
     font-family: 'Amatic SC', cursive;
+    cursor: pointer;
   }
 
   @media (max-width: 450px) {
@@ -424,6 +426,7 @@ hr {
 
 .aLeft {
   text-decoration: none;
+  cursor: pointer;
 }
 
 #btn1 {
