@@ -70,6 +70,7 @@ window.onload = function () {
 $(document).ready(function () {
   $("#btnEnter").click(function () {
     $("#divInicio").hide(1000);
+    $('#containerWelcome').show()
   });
 });
 

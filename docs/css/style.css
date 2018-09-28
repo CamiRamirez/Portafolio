@@ -3,14 +3,14 @@
   box-sizing: border-box;
   margin: 0;
 }
-html,body {
+html, body {
   font-size: 62.5%;
   height: 100%;
-  overflow: hidden;
   background-image: url(../img/art-artist-blur-436775.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height:100vh;
+  overflow: auto;
 }
 
 #logoc{
@@ -45,7 +45,7 @@ html,body {
 }
 
 
-@media (max-width: 450px) {
+@media (max-width: 560px) {
   #title{
     font-size: 10em;
   }
@@ -131,11 +131,12 @@ hr {
 
    #headerTop{
     width: 100%;
-    background-color: rgba(153, 152, 153, 0.3);
+    background-color: #3D474C;
     color: #1d1f20;
     height: 10em;
     padding:0;
     position: fixed;
+    z-index: 200;
   }
 
   #logoHeader{
@@ -187,6 +188,7 @@ hr {
   /*mensaje de bienvenida*/
 .containerWelcome{
   margin-top: 25em;
+  display: none;
 }
 
 #welcome{
@@ -296,7 +298,7 @@ hr {
   overflow-y: auto;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 580px) {
   .containerProjects{
     width: 80%;
   }
@@ -408,6 +410,26 @@ hr {
   transition-delay: 0.2s;
 }
 
+#trelloTitle{
+  color: white;
+  margin-top: 1em;
+  font-family: 'Raleway', sans-serif;
+  
+  margin-bottom: 1em;
+}
+
+#trelloSubtitle{
+  color: white;
+  margin-bottom: 1em;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5em;
+}
+
+.projectsBack{
+  background-color: rgba(153, 152, 153, 0.4);
+  margin-bottom: 1em;
+}
+
 /* menu lateral*/
 @media (max-width: 600px) {
   #menuLeft{
@@ -502,13 +524,17 @@ div.button:active {
 
 /*ACERCA DE MI*/
 .containerMe{
-  text-align: center;
   margin-top: 15em;
   background-color: rgba(153, 152, 153, 0.4);
   width: 75%;
   border-radius: 5px;
   display: none;
 }
+
+.containerPhoto{
+  text-align: center;
+}
+
 #fotoPerfil{
   width: 40em;
   position: relative;
@@ -540,6 +566,7 @@ div.button:active {
   letter-spacing: 1px;
   margin-top: 3em;
   padding-bottom: 5em;
+  text-align: left;
 }
 
 /*estilos seccion SKILLS*/
@@ -621,4 +648,10 @@ div.button:active {
   from { transform: translate(0,  0px); }
   65%  { transform: translate(0, 10px); }
   to   { transform: translate(0, -0px); }    
+}
+
+/**/
+
+.containerContact{
+  display: none;
 }
