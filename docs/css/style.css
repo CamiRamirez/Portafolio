@@ -293,22 +293,34 @@ hr {
 
 .containerProjects{
   display: none;
-  padding-top: 18em;
+  margin-top: 15em;
   text-align: center;
   overflow-y: auto;
 }
-
+.titleProjects{
+  color: white;
+  font-size: 4em;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 1.5em;
+}
 @media (max-width: 580px) {
   .containerProjects{
     width: 80%;
   }
 }
+
+@media (max-width: 600px) {
+  .titleProjects{
+    font-size: 2.8em;
+  }
+}
+
 .snip1584 {
   font-family: 'Raleway', sans-serif;
   position: relative;
   display: inline-block;
   overflow: hidden;
-  margin: 10px 8px;
+  margin-top: 10px;
   min-width: 230px;
   max-width: 315px;
   width: 100%;
@@ -370,7 +382,7 @@ hr {
 }
 .snip1584 h5 {
   font-weight: normal;
-  background-color: #ae895d;
+  background-color: #ca4370;
   padding: 3px 10px;
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
@@ -536,7 +548,7 @@ div.button:active {
 }
 
 #fotoPerfil{
-  width: 40em;
+  width: 55em;
   position: relative;
   margin-top: 10em;
 }
@@ -551,7 +563,7 @@ div.button:active {
 
 @media (max-width: 765px) {
   #aboutMe{
-    margin-top:0;
+    margin-top:2em;
   }
 }
 @media (max-width: 375px) {
@@ -565,7 +577,7 @@ div.button:active {
   font-family: 'Raleway', sans-serif;
   letter-spacing: 1px;
   margin-top: 3em;
-  padding-bottom: 5em;
+  padding-bottom: 1.5em;
   text-align: left;
 }
 
@@ -650,8 +662,68 @@ div.button:active {
   to   { transform: translate(0, -0px); }    
 }
 
-/**/
+/*SECCION CONTACTO*/
 
 .containerContact{
   display: none;
+  margin-top: 15em;
+}
+
+#titleContact{
+  color: white;
+  font-size: 4em;
+  font-family: 'Raleway', sans-serif;
+}
+@media (max-width: 600px) {
+  #titleContact{
+    font-size: 2.8em;
+  }
+}
+
+.btnContactIcon{
+background-color: black;
+height: 14em;
+width: 14em;
+border-radius: 7em;
+border: none;
+margin: 1em;
+cursor: pointer;
+}
+
+.cntIcon{
+color: white;
+font-size: 8em;
+}
+
+.cntIcon:hover{
+  color: #ca4370;
+}
+
+
+.iconsContactRow{
+  margin-top: 5em;
+}
+
+#btnCV{
+  background: transparent;
+  border-radius: 5px;
+  border: 2px solid white;
+  color: white;
+  font-size: 3em;
+  width: 7em;
+  margin-bottom: 2em;
+  cursor: pointer;
+}
+#titleChange2{
+  color: white;
+  font-size: 5em;
+  font-weight: 800;
+  font-family: 'Amatic SC', cursive;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 10;
+  text-align: center;
+}
+#girlcode{
+  width: 25em;
 }
