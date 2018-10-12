@@ -199,6 +199,7 @@ hr {
 .containerWelcome{
   margin-top: 25em;
   display: none;
+  overflow: hidden;
 }
 
 #welcome{
