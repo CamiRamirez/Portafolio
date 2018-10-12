@@ -19,8 +19,14 @@ html, body {
   text-align: center;  
   width: 15em;
   padding-bottom: 0;
-
 }
+
+@media (max-width: 500px) {
+  #logoc{
+    margin-top:6em;
+  }
+}
+
 
 .scene {
   position: relative;
@@ -47,7 +53,12 @@ html, body {
 
 @media (max-width: 560px) {
   #title{
-    font-size: 10em;
+    font-size: 9em;
+  }
+}
+@media (max-width: 390px) {
+  #title{
+    font-size: 7em;
   }
 }
 
@@ -169,14 +180,13 @@ hr {
       font-size: 3em;
     }
   }
-  @media (max-width: 390px) {
+  @media (max-width: 370px) {
     .btnContact{
-      margin-top: 1em;
-      font-size: 2.5em;
+      margin-top: 1.5em;
+      font-size: 2.1em;
     }
   }
  
-
   .btnContact:hover{
     background-color:  rgba(255, 255, 255, 0.2); 
     -webkit-transform: scale(1.1);
