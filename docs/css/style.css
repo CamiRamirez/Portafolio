@@ -325,7 +325,7 @@ hr {
   max-width: 315px;
   width: 100%;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 14px;
   text-align: left;
 }
 .snip1584 * {
@@ -366,7 +366,7 @@ hr {
   justify-content: center;
 }
 .snip1584 h3,
-.snip1584 h5 {
+.snip1584 a {
   margin: 0;
   opacity: 0;
   letter-spacing: 1px;
@@ -380,7 +380,7 @@ hr {
   transition-delay: 0.05s;
   margin-bottom: 5px;
 }
-.snip1584 h5 {
+.snip1584 a {
   font-weight: normal;
   background-color: #ca4370;
   padding: 3px 10px;
@@ -388,15 +388,9 @@ hr {
   transform: translateY(-100%);
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  color: white;
 }
-.snip1584 a {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
+
 .snip1584:hover:before,
 .snip1584.hover:before {
   top: 10px;
@@ -405,8 +399,8 @@ hr {
 }
 .snip1584:hover h3,
 .snip1584.hover h3,
-.snip1584:hover h5,
-.snip1584.hover h5 {
+.snip1584:hover a,
+.snip1584.hover a {
   -webkit-transform: translateY(0);
   transform: translateY(0);
   opacity: 1;
@@ -416,17 +410,17 @@ hr {
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
-.snip1584:hover h5,
-.snip1584.hover h5 {
+.snip1584:hover a,
+.snip1584.hover a {
   -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
+
 
 #trelloTitle{
   color: white;
   margin-top: 1em;
   font-family: 'Raleway', sans-serif;
-  
   margin-bottom: 1em;
 }
 
